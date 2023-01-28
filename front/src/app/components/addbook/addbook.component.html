@@ -1,0 +1,29 @@
+<div class="Container">
+  <form (ngSubmit)="doSubmitForm()">
+    <h1 style="color:darkmagenta;"><b>Enter details of the Book</b></h1><br>
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Book Id</mat-label>
+      <input matInput name="bookId" [(ngModel)]="data.bookId">
+    </mat-form-field>
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Book Name</mat-label>
+      <input matInput name="bookName" [(ngModel)]="data.bookName">
+    </mat-form-field>
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Author Name</mat-label>
+      <input matInput name="authorName" [(ngModel)]="data.authorName">
+    </mat-form-field>
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Issued To</mat-label>
+      <input matInput name="issuedTo" [(ngModel)]="data.issueedTo">
+    </mat-form-field>
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Issue Date</mat-label>
+      <input matInput name="issueDate" [(ngModel)]="data.issueDate">
+    </mat-form-field>
+    <div class="submitbutton">
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+      <button type="reset" mat-raised-button color="primary">Reset</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 style="color:darkmagenta ;"><b>Enter Student Id to View Student Record</b></h1>
+    <form (ngSubmit)="getdata()">
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Student Id</mat-label>
+            <input matInput name="studentId"[(ngModel)]="studentId">
+        </mat-form-field><br>
+        <button type="submit" mat-raised-button color="primary">Get Data</button><br>
+    </form>
+</div>
+<br>
+<div class="container2">
+    <table class="table-bordered table-striped" border="1">
+      <thead>
+      <tr>
+        <th>StudentId</th>
+        <th>StudentName</th>
+        <th>StudentEmail</th>
+        <th>StudentPhoneNumber</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr  *ngIf="studentfetched">
+        <td><span>{{studentfetched.studentId}}</span></td>
+        <td><span>{{studentfetched.name}}</span></td>
+        <td><span>{{studentfetched.emailId}}</span></td>
+        <td><span>{{studentfetched.phoneNumber}}</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

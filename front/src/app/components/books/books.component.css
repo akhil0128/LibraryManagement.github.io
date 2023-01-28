@@ -1,0 +1,17 @@
+.container{
+    margin-top:10% ;
+    text-align: center;
+    background-image: image(url(/LibraryManagement/src/app/images/library.jpeg));
+}
+.container1{
+    margin: 1%;
+}
+.container2{
+    margin: 1%;
+}
+.container3{
+    margin: 1%;
+}
+.container4{
+    margin: 1%;
+}

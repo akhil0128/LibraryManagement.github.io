@@ -1,0 +1,45 @@
+<div class="container">
+  <h1 style="color:darkmagenta ;"><b>Issue Book</b></h1>
+  <form (ngSubmit)="issueBook()">
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Student Id</mat-label>
+      <input matInput name="studentId" [(ngModel)]="studentId">
+    </mat-form-field><br>
+    <mat-form-field class="field" appearance="fill">
+      <mat-label>Book Id</mat-label>
+      <input matInput name="bookId" [(ngModel)]="bookId">
+    </mat-form-field><br>
+    <button type="submit" mat-raised-button color="primary">Issue Book</button><br>
+  </form>
+</div>
+<br>
+<div class="container1">
+  <table class="table table-bordered table-striped" border="1">
+    <thead>
+      <tr>
+        <th>StudentId</th>
+        <th>StudentName</th>
+        <th>StudentEmail</th>
+        <th>StudentPhoneNumber</th>
+        <th>BookId</th>
+        <th>BookName</th>
+        <th>AuthorName</th>
+        <th>IssueedTo</th>
+        <th>IssueDate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="studentfetched">
+        <td><span>{{studentfetched.studentId}}</span></td>
+        <td><span>{{studentfetched.name}}</span></td>
+        <td><span>{{studentfetched.emailId}}</span></td>
+        <td><span>{{studentfetched.phoneNumber}}</span></td>
+        <td><span>{{studentfetched.bookDTO.bookId}}</span></td>
+        <td><span>{{studentfetched.bookDTO.bookName}}</span></td>
+        <td><span>{{studentfetched.bookDTO.authorName}}</span></td>
+        <td><span>{{studentfetched.bookDTO.issueedTo}}</span></td>
+        <td><span>{{studentfetched.bookDTO.issueDate}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

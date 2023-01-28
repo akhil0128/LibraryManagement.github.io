@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 style="color:darkmagenta ;"><b>Book Details</b></h1>
+    <form (ngSubmit)="getdata()">
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Book Id</mat-label>
+            <input matInput name="bookId"[(ngModel)]="bookId">
+        </mat-form-field><br>
+        <button type="submit" mat-raised-button color="primary">Get Data</button><br>
+    </form>
+</div>
+<br>
+<div class="container2">
+    <table class="table-bordered table-striped" border="1">
+      <thead>
+      <tr>
+        <th>BookId</th>
+        <th>BookName</th>
+        <th>AuthorName</th>
+        <th>IssuedTo</th>
+        <th>IssuedDate</th>
+        <th>Availability</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngIf="bookfetched">
+        <td><span>{{bookfetched.bookId}}</span></td>
+        <td><span>{{bookfetched.bookName}}</span></td>
+        <td><span>{{bookfetched.authorName}}</span></td>
+        <td><span>{{bookfetched.issueedTo}}</span></td>
+        <td><span>{{bookfetched.issueDate}}</span></td>
+        <td><span>{{bookfetched.availability}}</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+

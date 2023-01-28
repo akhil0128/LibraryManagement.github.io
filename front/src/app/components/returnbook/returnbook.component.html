@@ -1,0 +1,14 @@
+<div class="container">
+    <strong><h1 style="color:darkmagenta ;">Return Book</h1></strong>
+    <form (ngSubmit)="retrunBook()">
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Student Id</mat-label>
+            <input matInput name="studentId"[(ngModel)]="studentId">
+        </mat-form-field><br>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Book Id</mat-label>
+            <input matInput name="bookId"[(ngModel)]="bookId">
+        </mat-form-field><br>
+        <button type="submit" mat-raised-button color="primary">Return Book</button><br>
+    </form>
+</div>

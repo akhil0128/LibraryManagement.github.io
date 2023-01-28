@@ -1,0 +1,14 @@
+.field{
+    width:100%;
+}
+
+.Container{
+    margin-top: 7%;
+    width: 50%;
+    margin-left:25%;
+    text-align: center;
+}
+.submitbutton button{
+    text-align: center;
+    margin: 5px;
+}

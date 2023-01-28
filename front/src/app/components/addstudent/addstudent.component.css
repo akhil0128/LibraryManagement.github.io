@@ -1,0 +1,18 @@
+.field{
+    width:100%;
+}
+
+.innerContainer{
+    width: 50%;
+    margin:auto;
+    text-align: center;
+}
+.submit{
+    text-align: center;
+}
+.submitbutton button{
+    margin: 5px;
+}
+.container{
+    margin-top:7%;
+}
