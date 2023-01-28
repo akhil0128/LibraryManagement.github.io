@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: StudentAPI-service
+        uri: lb://StudentAPI-service
+        predicates:
+        - Path=/student/**
+      - id: BookAPI-service
+        uri: lb://BookAPI-service
+        predicates:
+        - Path=/book/**
+  application:
+    name: Gateway
